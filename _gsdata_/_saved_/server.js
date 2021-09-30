@@ -1,0 +1,166 @@
+var io = require('socket.io');
+
+var express = require('express');
+var http = require('http');
+var app = require('express')();
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
+
+
+
+
+var senhaMesa = new Array('', '');
+var dados = null;
+var numeroSenha = 0;
+var principal = {};
+var senhas1 = {};
+var senhas2 = {};
+var senhas3 = {};
+var senhas4 = {};
+var senhas5 = {};
+var senhas6 = {};
+
+zerarSenhas();
+
+for (var i = 0; i < 60; i++)
+    console.log(" ");
+
+
+
+app.use(function (req, res, next) {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
+app.get('/', function (req, res) {
+
+    //send the index.html file for all requests
+    res.sendFile(__dirname + '/index.html');
+
+});
+
+app.use(express.static(__dirname + '/'));
+
+http.listen(3001, function () {
+
+    console.log('Sistema: Painel de Senha ');
+    console.log('Painel rodando em http://');
+
+
+});
+
+
+io.sockets.emit("senhas", dados);
+
+io.on("connection", function (socket) {
+    //console.log('Conexão recebida');
+
+    socket.emit("senhas", dados);
+
+    socket.on("entrar", function (apelido, callback) {
+        socket.emit("senhas", dados);
+        console.log(apelido);
+
+    });
+    senhaMesa.shift();
+
+
+
+    socket.on("proximo", function (dados, idUsuario) {
+        senhaMesa.push(Array(dados, numeroSenha));
+        socket.emit("senhasUsuario", numeroSenha);
+        
+        console.log('Senha: '+ numeroSenha + ' | Local: '+ dados+ ' | ID Do usuario:' + idUsuario);
+
+       
+        numeroSenha++;
+        
+    });
+
+    socket.on("setarSenha", function (senha, callback) {
+        zerarSenhas();
+        numeroSenha = parseInt(senha);
+
+        console.log("AVISO: Senha atual setada para: " + senha);
+        io.sockets.emit("senhas", dados);
+    })
+
+});
+
+
+
+function zerarSenhas() {
+    principal = {
+        'senha': null,
+        'mesa': null
+    };
+    senhas1 = {
+        'senha': null,
+        'mesa': null
+    };
+    senhas2 = {
+        'senha': null,
+        'mesa': null
+    };
+    senhas3 = {
+        'senha': null,
+        'mesa': null
+    };
+    senhas4 = {
+        'senha': null,
+        'mesa': null
+    };
+    senhas5 = {
+        'senha': null,
+        'mesa': null
+    };
+    senhas6 = {
+        'senha': null,
+        'mesa': null
+    };
+
+
+    dados = {
+        'principal': principal,
+        'antigas1': senhas1,
+        'antigas2': senhas2,
+        'antigas3': senhas3,
+        'antigas4': senhas4,
+        'antigas5': senhas5,
+        'antigas6': senhas6
+        
+    };
+}
+
+
+
+setInterval(func, 1000);
+function func() {
+
+    if (senhaMesa.length > 0) {
+        senhas6 = senhas5;
+        senhas5 = senhas4;
+        senhas4 = senhas3;
+        senhas3 = senhas2;
+        senhas2 = senhas1;
+        senhas1 = principal;
+
+        principal = {
+            'senha': senhaMesa[0][1],
+            'mesa': senhaMesa[0][0]
+        };
+
+        dados = {
+            'principal': principal,
+            'antigas1': senhas1,
+            'antigas2': senhas2,
+            'antigas3': senhas3,
+            'antigas4': senhas4,
+            'antigas5': senhas5,
+            'antigas6': senhas6
+        };
+
+        io.sockets.emit("senhas", dados);
+        senhaMesa.shift();
+    }
+}

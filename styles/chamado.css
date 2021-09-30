@@ -1,0 +1,20 @@
+.btn-ajuste_index{
+    position: absolute;
+    width: 64px;
+    height: 20px;
+    left: 45px;
+    top: 29px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height, or 125% */
+    text-transform: uppercase;
+    color: aliceblue;
+}
+header{
+    display: flex;
+    justify-content: center;
+    
+}

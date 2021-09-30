@@ -1,0 +1,7 @@
+2021-09-27 16:22:26: - Análise iniciada por On File Change, After Delay, Under Runner
+2021-09-27 16:22:27: Alterações: 1, Conflitos: 0, Tempo: 0, Correções: 0, Erros: 0, All: 687
+2021-09-27 16:22:27: Right to Left: Copy File: 1 
+2021-09-27 16:22:27: == Sincronização iniciada por On File Change, After Delay, Under Runner
+2021-09-27 16:22:27: Start only 1 threads, limited by tasks to run
+2021-09-27 16:22:27: Copiar 'D:/Projetos/Painel de Senhas/.vs/slnx.sqlite' -> '//INF01-LJ41/Users/inf01-lj41/Desktop/ProjetoNode/.vs/slnx.sqlite' (1,978,368)
+2021-09-27 16:22:27: == Sincronização concluída. Tempo: 00:00:02, Velocidade: 0.00/s, OK: 1, Erros: 0

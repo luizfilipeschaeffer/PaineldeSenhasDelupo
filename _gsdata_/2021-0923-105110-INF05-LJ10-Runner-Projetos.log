@@ -1,0 +1,7 @@
+2021-09-23 10:51:11: - Análise iniciada por On File Change, After Delay, Under Runner
+2021-09-23 10:51:12: Alterações: 1, Conflitos: 0, Tempo: 0, Correções: 0, Erros: 0, All: 680
+2021-09-23 10:51:12: Left to Right: Copy File: 1 
+2021-09-23 10:51:12: == Sincronização iniciada por On File Change, After Delay, Under Runner
+2021-09-23 10:51:12: Start only 1 threads, limited by tasks to run
+2021-09-23 10:51:12: Copiar '//INF01-LJ41/Users/inf01-lj41/Desktop/ProjetoNode/server.js' -> 'D:/Projetos/Painel de Senhas/server.js' (3,292)
+2021-09-23 10:51:12: == Sincronização concluída. Tempo: 00:00:02, Velocidade: 0.00/s, OK: 1, Erros: 0
