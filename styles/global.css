@@ -110,7 +110,7 @@ animation-name: flash;
     color: #FFFFFF;
 }
 footer{
-    height: 150px;
+    height: 10.5rem;
     background-color: #c4c4c4;
     display: flex;
     flex-direction: row;
@@ -136,27 +136,42 @@ footer{
     color: #000000;
 }
 .historico_senhas{
-    width: 70vw;
+    width: 80vw;
     background-color: #c4c4c4;
     display: flex;
     align-items: center;
     /* titulo senha antiga Abarro*/
 }
-.historico_senhas span{
-    height: 80px;
-    width: 150px;
+.historico{
+    height: 8rem;
+    width: 10rem;
     background-color: #565555;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     border-radius: 10px;
     margin: 5px;
-    font-size: 60px;
+}
+.labelGuiche{
+    font-size: 1.5rem;
     font-family: Montserrat;
     font-weight: 600;
     color: white;
+    align-items: center;
+}
+.labelSenha{
+    font-size: 6rem;
+    font-family: Montserrat;
+    font-weight: 600;
+    color: white;
+    align-items: center;
 }
 /*
+
+
+
+
+
 
 #logo .titulo {
 
