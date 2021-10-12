@@ -24,13 +24,13 @@
     </header>
     <div class="painel">
         <div id="logo_Principal">
-            <img class="logo-img" src="imgs/logo_branca.png">
+            <img class="img" src="imgs/logo_branca.png">
         </div>
         <div class="senhas" id="painelsenha">
             <div class="display-senha">
                 <h2 class="titulo-senha">SENHA:</h2>
                 <div class="numero_da_senha">
-                    <span class="labelSenha" id="principalSenha">0</span>
+                    <span  id="principalSenha">0</span>
                 </div>
             </div>
             <div class="card_guiche">
@@ -42,7 +42,7 @@
         <div class="titulo-senhas-antigas">
             <h3>Senhas Anteriores:</h3>
         </div>
-        <div class="historico_senhas">
+        <div class="historico_guiche_senhas">
             <div class="historico">
                 <div class="guiche">
                     <span class="labelGuiche" id="antiga01Mesa"></span>
@@ -101,10 +101,10 @@
         </div>
     </footer>
 </body>
-<script src="http://localhost:3001/socket.io/socket.io.js"></script>
+<script src="http://192.168.0.170:3001/socket.io/socket.io.js"></script>
 <script>
     $(document).ready(function () {
-        var socket = io.connect("http://localhost:3001");
+        var socket = io.connect("http://192.168.0.170:3001");
         socket.on('senhas', function (senhas) {
             reset();
             $(".principal").animate({
@@ -204,5 +204,5 @@
 
     }
 </script>
-
+<script src="/popup.js"></script>
 </html>
