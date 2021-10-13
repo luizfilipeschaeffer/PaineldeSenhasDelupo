@@ -1,9 +1,0 @@
-2021-09-24 08:15:00: - Análise iniciada por On File Change First Full Analyze Upon Folder Connect, Under Runner
-2021-09-24 08:15:01: Alterações: 4, Conflitos: 0, Tempo: 0, Correções: 0, Erros: 0, All: 681
-2021-09-24 08:15:01: Left to Right: Copy File: 4 
-2021-09-24 08:15:01: == Sincronização iniciada por On File Change First Full Analyze Upon Folder Connect, Under Runner
-2021-09-24 08:15:01: Copiar '//INF01-LJ41/Users/inf01-lj41/Desktop/ProjetoNode/index.html' -> 'D:/Projetos/Painel de Senhas/index.html' (5,790)
-2021-09-24 08:15:01: Copiar '//INF01-LJ41/Users/inf01-lj41/Desktop/ProjetoNode/chamado.html' -> 'D:/Projetos/Painel de Senhas/chamado.html' (8,734)
-2021-09-24 08:15:01: Copiar novo '//INF01-LJ41/Users/inf01-lj41/Desktop/ProjetoNode/audio/chamada.mp3' -> 'D:/Projetos/Painel de Senhas/audio/chamada.mp3' (7,437)
-2021-09-24 08:15:01: Copiar '//INF01-LJ41/Users/inf01-lj41/Desktop/ProjetoNode/server.js' -> 'D:/Projetos/Painel de Senhas/server.js' (3,614)
-2021-09-24 08:15:01: == Sincronização concluída. Tempo: 00:00:01, Velocidade: 0.00/s, OK: 4, Erros: 0
