@@ -91,16 +91,17 @@ animation-name: flash;
     height: 45%;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 5rem;    
+    font-size: 5rem;
     text-align: center;
     margin-top: 10px;
     text-transform: uppercase;
     color: #ffffff;
+    align-items: center;
 }
 .numero_da_senha{
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 8rem;
+    font-size: 10rem;
     text-align: center;
     /* text-transform: uppercase; */
     color: #ffffff;
@@ -141,7 +142,7 @@ footer{
 .titulo-senhas-antigas h3{    
     font-family: Montserrat;
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-align: center;    
     color: #000000;
 }
