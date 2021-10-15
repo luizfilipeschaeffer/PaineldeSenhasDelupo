@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -104,10 +103,10 @@
         </div>
     </footer>
 </body>
-<script src="http://192.168.0.170:3001/socket.io/socket.io.js"></script>
+<script src="http://192.168.100.18:3001/socket.io/socket.io.js"></script>
 <script>
     $(document).ready(function () {
-        var socket = io.connect("http://192.168.0.170:3001");
+        var socket = io.connect("http://192.168.100.18:3001");
         socket.on('senhas', function (senhas) {
             reset();
             $(".principal").animate({
